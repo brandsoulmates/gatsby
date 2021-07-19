@@ -207,7 +207,8 @@ export function htmlReducer(
     }
 
     case `SSR_USED_UNSAFE_BUILTIN`: {
-      state.unsafeBuiltinWasUsedInSSR = true
+      // disable UNSAFE_BUILTIN error to allow for http.request
+      // state.unsafeBuiltinWasUsedInSSR = true
       return state
     }
   }
